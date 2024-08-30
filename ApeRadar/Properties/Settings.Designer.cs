@@ -160,7 +160,22 @@ namespace ApeRadar.Properties {
                 this["ColorStyle"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ApeRadarTheme
+        {
+            get
+            {
+                return ((int)(this["ApeRadarTheme"]));
+            }
+            set
+            {
+                this["ApeRadarTheme"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("🐵")]

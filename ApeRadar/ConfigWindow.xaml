@@ -220,6 +220,21 @@
                                     <ComboBoxItem Content="{DynamicResource ComboBoxItemRainbow}"/>
                                 </ComboBox>
                             </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="5">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                    <Label Content="{DynamicResource ApeRadarTheme}" Margin="5,5,0,5"/>
+                                    <Label Content="(?)" Margin="0,5,5,5" ToolTip="{DynamicResource ToolTipColorStyle}"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="1" Grid.Column="6">
+                                <ComboBox x:Name="ApeRadarTheme" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="5">
+                                    <ComboBoxItem Content="{DynamicResource ApeRadarThemeLight}"/>
+                                    <ComboBoxItem Content="{DynamicResource ApeRadarThemeDark}"/>
+                                </ComboBox>
+                            </Grid>
+
+
                             <Grid Grid.Row="3" Grid.Column="1">
                                 <Label Content="{DynamicResource LabelIcon}" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
                             </Grid>

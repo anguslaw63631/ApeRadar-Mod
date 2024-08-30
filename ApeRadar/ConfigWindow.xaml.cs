@@ -24,6 +24,7 @@ namespace ApeRadar
             SliderMaximumRetryAttemptsOnError.Value = Properties.Settings.Default.MaximumRetryAttemptsOnError;
             ComboBoxWinrateTypeSelect.SelectedIndex = Properties.Settings.Default.WinrateTypeUsed;
             ComboBoxColorStyle.SelectedIndex = Properties.Settings.Default.ColorStyle;
+            ApeRadarTheme.SelectedIndex = Properties.Settings.Default.ApeRadarTheme;
             TxtApeIcon.Text = Properties.Settings.Default.ApeIcon;
             TxtUnicumIcon.Text = Properties.Settings.Default.UnicumIcon;
             TxtHiddenIcon.Text = Properties.Settings.Default.HiddenIcon;
@@ -91,6 +92,7 @@ namespace ApeRadar
                     Properties.Settings.Default.MaximumRetryAttemptsOnError = Convert.ToInt32(SliderMaximumRetryAttemptsOnError.Value);
                     Properties.Settings.Default.WinrateTypeUsed = ComboBoxWinrateTypeSelect.SelectedIndex;
                     Properties.Settings.Default.ColorStyle = ComboBoxColorStyle.SelectedIndex;
+                    Properties.Settings.Default.ApeRadarTheme = ApeRadarTheme.SelectedIndex;
                     Properties.Settings.Default.ApeIcon = TxtApeIcon.Text;
                     Properties.Settings.Default.UnicumIcon = TxtUnicumIcon.Text;
                     Properties.Settings.Default.HiddenIcon = TxtHiddenIcon.Text;

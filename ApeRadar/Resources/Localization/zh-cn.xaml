@@ -76,6 +76,10 @@
     <system:String x:Key="ComboBoxItemAPITypeWGPublic">WG Public API</system:String>
     <system:String x:Key="ComboBoxItemAPITypeWGPublicWithYuyukoProxy">WG Public API（通过Yuyuko代理访问）</system:String>
 
+    <system:String x:Key="ApeRadarTheme">主题</system:String>
+    <system:String x:Key="ApeRadarThemeLight">浅色</system:String>
+    <system:String x:Key="ApeRadarThemeDark">黑暗</system:String>
+
     <system:String x:Key="LabelAllies">友方</system:String>
     <system:String x:Key="LabelEnemies">敌方</system:String>
     <system:String x:Key="LabelAverageData">平均数据：</system:String>
