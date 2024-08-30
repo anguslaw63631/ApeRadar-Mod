@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection.Metadata;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -360,5 +361,23 @@ namespace ApeRadar
             BtnCheckForUpdates.IsEnabled = true;
             LabelShipListVersionDateStr.Content = $"{ShipInfoUtils.GetShipInfoVersion()} ({ShipInfoUtils.GetShipInfoDate()})";
         }
+
+        public void SwitchTheme(object sender, SelectionChangedEventArgs e)
+        {
+            ResourceDictionary DarkTheme = new ResourceDictionary() { Source = new Uri("/Resources/Themes/Dark.xaml", UriKind.Relative) };
+            ResourceDictionary LightTheme = new ResourceDictionary() { Source = new Uri("/Resources/Themes/Light.xaml", UriKind.Relative) };
+
+            if (ApeRadarTheme.SelectedIndex == 0)
+            {
+                App.Current.Resources.Remove(DarkTheme);
+                App.Current.Resources.MergedDictionaries.Add(LightTheme);
+            }
+            else
+            {
+                App.Current.Resources.Remove(LightTheme);
+                App.Current.Resources.MergedDictionaries.Add(DarkTheme);
+            }
+        }
+
     }
 }

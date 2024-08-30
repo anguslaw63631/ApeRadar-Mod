@@ -393,7 +393,7 @@
 
     </Window.Resources>
 
-    <Grid x:Name="MainWindowGrid">
+    <Grid x:Name="MainWindowGrid" Background="{DynamicResource BackgroundColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="39*" MinHeight="390"/>

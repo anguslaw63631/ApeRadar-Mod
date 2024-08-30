@@ -258,6 +258,20 @@ namespace ApeRadar
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Start();
             LogUtils.WriteInfo("Timer Start");
+
+            ResourceDictionary DarkTheme = new ResourceDictionary() { Source = new Uri("/Resources/Themes/Dark.xaml", UriKind.Relative) };
+            ResourceDictionary LightTheme = new ResourceDictionary() { Source = new Uri("/Resources/Themes/Light.xaml", UriKind.Relative) };
+
+            if (Properties.Settings.Default.ApeRadarTheme == 0)
+            {
+                App.Current.Resources.Remove(DarkTheme);
+                App.Current.Resources.MergedDictionaries.Add(LightTheme);
+            }
+            else
+            {
+                App.Current.Resources.Remove(LightTheme);
+                App.Current.Resources.MergedDictionaries.Add(DarkTheme);
+            }
         }
 
         private void Timer_Tick(object? sender, EventArgs e)

@@ -61,6 +61,7 @@
             <Setter Property="ContextMenu" Value="{StaticResource RowMenu}"/>
         </Style>
     </Window.Resources>
+    <Border Background="{DynamicResource BackgroundColor}">
     <Viewbox StretchDirection="DownOnly">
         <Grid>
             <Grid.RowDefinitions>
@@ -222,13 +223,12 @@
                             </Grid>
 
                             <Grid Grid.Row="1" Grid.Column="5">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                                    <Label Content="{DynamicResource ApeRadarTheme}" Margin="5,5,0,5"/>
-                                    <Label Content="(?)" Margin="0,5,5,5" ToolTip="{DynamicResource ToolTipColorStyle}"/>
-                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="{DynamicResource ApeRadarTheme}" Margin="5,5,0,5"/>
+                                    </StackPanel>
                             </Grid>
                             <Grid Grid.Row="1" Grid.Column="6">
-                                <ComboBox x:Name="ApeRadarTheme" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="5">
+                                <ComboBox x:Name="ApeRadarTheme" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="5" SelectionChanged="SwitchTheme">
                                     <ComboBoxItem Content="{DynamicResource ApeRadarThemeLight}"/>
                                     <ComboBoxItem Content="{DynamicResource ApeRadarThemeDark}"/>
                                 </ComboBox>
@@ -820,4 +820,5 @@
             </Grid>
         </Grid>
     </Viewbox>
+    </Border>
 </Window>
