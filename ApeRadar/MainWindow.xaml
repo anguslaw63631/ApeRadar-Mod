@@ -387,14 +387,13 @@
         <Style x:Key="DataGridPlayerListRowStyle" TargetType="DataGridRow">
             <Setter Property="ContextMenu" Value="{StaticResource RowMenu}"/>
             <Setter Property="ToolTip" Value="{StaticResource ToolTipPlayerDetails}"/>
-            <Setter Property="Background" Value="{DynamicResource WindowsColor}"/>
         </Style>
 
 
 
     </Window.Resources>
 
-    <Grid x:Name="MainWindowGrid" Background="{DynamicResource BackgroundColor}">
+    <Grid x:Name="MainWindowGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="39*" MinHeight="390"/>
@@ -418,41 +417,41 @@
 
                 <Grid Grid.Column="0">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,0,0,0">
-                        <Label Content="{DynamicResource LabelAllies}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Foreground="{DynamicResource TextColor}"/>
+                        <Label Content="{DynamicResource LabelAllies}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
-                        <Label Content="{DynamicResource LabelAverageData}" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                        <Label Content="{DynamicResource LabelAverageData}" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="14"/>
                         <StackPanel Orientation="Vertical" Margin="0,5,10,0">
-                            <Label Content="{DynamicResource LabelAverageAccountWinrate}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
-                            <Label Content="{Binding AllyAvgAccountWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelAverageAccountWinrate}" HorizontalAlignment="Center" FontSize="14"/>
+                            <Label Content="{Binding AllyAvgAccountWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="0,5,10,0">
-                            <Label Content="{DynamicResource LabelAverageWeightedWinrate}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
-                            <Label Content="{Binding AllyAvgWeightedWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelAverageWeightedWinrate}" HorizontalAlignment="Center" FontSize="14"/>
+                            <Label Content="{Binding AllyAvgWeightedWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="0,5,0,0">
-                            <Label Content="{DynamicResource LabelAverageBattleCount}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
-                            <Label Content="{Binding AllyAvgBattleCount}" ContentStringFormat="f1" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelAverageBattleCount}" HorizontalAlignment="Center" FontSize="14"/>
+                            <Label Content="{Binding AllyAvgBattleCount}" ContentStringFormat="f1" HorizontalAlignment="Center" FontSize="14"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Column="1">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,0,0,0">
-                        <Label Content="{DynamicResource LabelEnemies}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Foreground="{DynamicResource TextColor}"/>
+                        <Label Content="{DynamicResource LabelEnemies}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
-                        <Label Content="{DynamicResource LabelAverageData}" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                        <Label Content="{DynamicResource LabelAverageData}" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="14"/>
                         <StackPanel Orientation="Vertical" Margin="0,5,10,0">
-                            <Label Content="{DynamicResource LabelAverageAccountWinrate}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
-                            <Label Content="{Binding EnemyAvgAccountWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelAverageAccountWinrate}" HorizontalAlignment="Center" FontSize="14"/>
+                            <Label Content="{Binding EnemyAvgAccountWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="0,5,10,0">
-                            <Label Content="{DynamicResource LabelAverageWeightedWinrate}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
-                            <Label Content="{Binding EnemyAvgWeightedWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelAverageWeightedWinrate}" HorizontalAlignment="Center" FontSize="14"/>
+                            <Label Content="{Binding EnemyAvgWeightedWinrate}" ContentStringFormat="p2" HorizontalAlignment="Center" FontSize="14"/>
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="0,5,0,0">
-                            <Label Content="{DynamicResource LabelAverageBattleCount}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
-                            <Label Content="{Binding EnemyAvgBattleCount}" ContentStringFormat="f1" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelAverageBattleCount}" HorizontalAlignment="Center" FontSize="14"/>
+                            <Label Content="{Binding EnemyAvgBattleCount}" ContentStringFormat="f1" HorizontalAlignment="Center" FontSize="14"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -463,7 +462,7 @@
                 <Label x:Name="LabelGamePathIsSetOrNot" Content="{Binding Source={x:Static p:Settings.Default}, Path=GamePath, Converter={StaticResource CvtGamePathIsSetText}}" Foreground="{Binding Source={x:Static p:Settings.Default}, Path=GamePath, Converter={StaticResource CvtGamePathIsSetColor}}" Margin="20,0,0,0" FontSize="18"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Label Content="🌐" FontSize="20" VerticalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
+                <Label Content="🌐" FontSize="20" VerticalAlignment="Center"/>
                 <ComboBox x:Name="ComboBoxLanguage" DisplayMemberPath="Content" SelectedValuePath="Value" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center" Width="90" SelectionChanged="ComboBoxLanguage_SelectionChanged"/>
             </StackPanel>
         </Grid>
@@ -486,11 +485,11 @@
                 <Grid Grid.Row="0">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <StackPanel Orientation="Vertical" Margin="0,0,40,0">
-                            <Label Content="{DynamicResource LabelDisplayStyle}" VerticalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelDisplayStyle}" VerticalAlignment="Center"/>
                             <ComboBox x:Name="ComboBoxMirrored" DisplayMemberPath="Content" SelectedValuePath="Value" HorizontalAlignment="Right" VerticalAlignment="Center" Width="90" SelectionChanged="ComboBoxMirrored_SelectionChanged" />
                         </StackPanel>
                         <StackPanel Orientation="Vertical" Margin="0,0,10,0">
-                            <Label Content="{DynamicResource LabelPlayerListSortBy}" VerticalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
+                            <Label Content="{DynamicResource LabelPlayerListSortBy}" VerticalAlignment="Center"/>
                             <ComboBox x:Name="ComboBoxSortBy" DisplayMemberPath="Content" SelectedValuePath="Value" HorizontalAlignment="Right" VerticalAlignment="Center" Width="180" SelectionChanged="ComboBoxSortBy_SelectionChanged"/>
                         </StackPanel>
                     </StackPanel>
@@ -517,19 +516,19 @@
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="2">
-            <TextBox x:Name="TxtOutputText" HorizontalAlignment="Stretch" Margin="5" TextWrapping="Wrap" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto" IsEnabled="{Binding Source={x:Static p:Settings.Default}, Path=OutputTextUnlock}" FontSize="{Binding Source={x:Static p:Settings.Default}, Path=OutputTextFontSize}" Foreground="{DynamicResource TextColor}" Background="{DynamicResource WindowsColor}"/>
+            <TextBox x:Name="TxtOutputText" HorizontalAlignment="Stretch" Margin="5" TextWrapping="Wrap" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Auto" IsEnabled="{Binding Source={x:Static p:Settings.Default}, Path=OutputTextUnlock}" FontSize="{Binding Source={x:Static p:Settings.Default}, Path=OutputTextFontSize}"/>
         </Grid>
         <Grid Grid.Row="3" Grid.Column="1" Grid.RowSpan="2">
-            <DataGrid x:Name="DataGridNotificationMessages"  RowBackground="{DynamicResource WindowsColor}" Background="{DynamicResource WindowsColor}" Foreground="{DynamicResource TextColor}" Margin="5,10,0,0" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserResizeColumns="False" SelectionMode="Single" HeadersVisibility="Column" ItemsSource="{Binding Source={x:Static utils:NotificationMessageUtils.NotificationMessageCollection}}" CanUserReorderColumns="False" CanUserSortColumns="False" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <DataGrid x:Name="DataGridNotificationMessages" Margin="5,10,0,0" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserResizeColumns="False" SelectionMode="Single" HeadersVisibility="Column" ItemsSource="{Binding Source={x:Static utils:NotificationMessageUtils.NotificationMessageCollection}}" CanUserReorderColumns="False" CanUserSortColumns="False" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <DataGrid.Resources>
                     <DataTemplate x:Key="TimeHeaderTemplate">
-                        <TextBlock Text="{DynamicResource DataGridHeaderTime}" FontSize="11" Foreground="{DynamicResource TextColor}"/>
+                        <TextBlock Text="{DynamicResource DataGridHeaderTime}" FontSize="11"/>
                     </DataTemplate>
                     <DataTemplate x:Key="TimeTemplate">
                         <TextBlock Text="{Binding Time, StringFormat='{}{0:yyyy-MM-dd HH:mm:ss}'}" FontSize="11" Foreground="{Binding Type, Converter={StaticResource CvtNotificationMessageColor}}" Margin="5,0,0,0"/>
                     </DataTemplate>
                     <DataTemplate x:Key="MessageHeaderTemplate">
-                        <TextBlock Text="{DynamicResource DataGridHeaderMessage}" FontSize="11" Foreground="{DynamicResource TextColor}"/>
+                        <TextBlock Text="{DynamicResource DataGridHeaderMessage}" FontSize="11"/>
                     </DataTemplate>
                     <DataTemplate x:Key="MessageTemplate">
                         <TextBlock Text="{Binding Message}" FontSize="11" Foreground="{Binding Type, Converter={StaticResource CvtNotificationMessageColor}}" Margin="5,0,0,0"/>
@@ -537,18 +536,8 @@
                 </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTemplateColumn HeaderTemplate="{StaticResource TimeHeaderTemplate}" CellTemplate="{StaticResource TimeTemplate}" MinWidth="120">
-                        <DataGridTemplateColumn.HeaderStyle>
-                            <Style TargetType="{x:Type DataGridColumnHeader}">
-                                <Setter Property="Background" Value="{DynamicResource WindowsColor}"></Setter>
-                            </Style>
-                        </DataGridTemplateColumn.HeaderStyle>
                     </DataGridTemplateColumn>
                     <DataGridTemplateColumn HeaderTemplate="{StaticResource MessageHeaderTemplate}" CellTemplate="{StaticResource MessageTemplate}" MinWidth="570">
-                        <DataGridTemplateColumn.HeaderStyle>
-                            <Style TargetType="{x:Type DataGridColumnHeader}">
-                                <Setter Property="Background" Value="{DynamicResource WindowsColor}"></Setter>
-                            </Style>
-                        </DataGridTemplateColumn.HeaderStyle>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>

@@ -1,9 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <SolidColorBrush Color="#222831" x:Key="BackgroundColor"></SolidColorBrush>
-    <SolidColorBrush Color="#393E46" x:Key="WindowsColor"></SolidColorBrush>
-    <SolidColorBrush Color="#EEEEEE" x:Key="TextColor"></SolidColorBrush>
-    <SolidColorBrush Color="#00ADB5" x:Key="SelectedBoxColor"></SolidColorBrush>
 
     <Style TargetType="Control">
         <Setter Property="Foreground" Value ="#EEEEEE"/>
@@ -31,7 +27,7 @@
                     <Grid>
                         <Border 
                                 Name="Border"
-                                Background="{DynamicResource WindowsColor}"
+                                Background="#393E46"
                                 BorderThickness="1,1,1,1" >
                             <ContentPresenter x:Name="ContentSite"
                                     VerticalAlignment="Center"
@@ -44,12 +40,12 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Panel.ZIndex" Value="100" />
-                            <Setter TargetName="Border" Property="Background" Value="{DynamicResource SelectedBoxColor}" />
-                            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="#00ADB5" />
+                            <Setter Property="Foreground" Value="#EEEEEE" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter TargetName="Border" Property="Background" Value="{DynamicResource WindowsColor}" />
-                            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                            <Setter TargetName="Border" Property="Background" Value="#393E46" />
+                            <Setter Property="Foreground" Value="#EEEEEE" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
