@@ -61,7 +61,7 @@
             <Setter Property="ContextMenu" Value="{StaticResource RowMenu}"/>
         </Style>
     </Window.Resources>
-    <Border Background="{DynamicResource BackgroundColor}">
+    <Border>
     <Viewbox StretchDirection="DownOnly">
         <Grid>
             <Grid.RowDefinitions>

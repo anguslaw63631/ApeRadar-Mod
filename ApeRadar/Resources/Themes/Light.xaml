@@ -3,4 +3,12 @@
     <SolidColorBrush Color="White" x:Key="BackgroundColor"></SolidColorBrush>
     <SolidColorBrush Color="White" x:Key="WindowsColor"></SolidColorBrush>
     <SolidColorBrush Color="Black" x:Key="TextColor"></SolidColorBrush>
+    <SolidColorBrush Color="#00ADB5" x:Key="SelectedBoxColor"></SolidColorBrush>
+
+    <Style TargetType="Control">
+        <Setter Property="Foreground" Value ="Black"/>
+    </Style>
+    <Style TargetType="TextBlock">
+        <Setter Property="Foreground" Value ="Black"/>
+    </Style>
 </ResourceDictionary>

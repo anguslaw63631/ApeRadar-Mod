@@ -3,4 +3,60 @@
     <SolidColorBrush Color="#222831" x:Key="BackgroundColor"></SolidColorBrush>
     <SolidColorBrush Color="#393E46" x:Key="WindowsColor"></SolidColorBrush>
     <SolidColorBrush Color="#EEEEEE" x:Key="TextColor"></SolidColorBrush>
+    <SolidColorBrush Color="#00ADB5" x:Key="SelectedBoxColor"></SolidColorBrush>
+
+    <Style TargetType="Control">
+        <Setter Property="Foreground" Value ="#EEEEEE"/>
+    </Style>
+    <Style TargetType="TextBlock">
+        <Setter Property="Foreground" Value ="#EEEEEE"/>
+    </Style>
+    <Style TargetType="DataGrid">
+        <Setter Property="Background" Value="#222831"/>
+    </Style>
+    <Style TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="#393E46"/>
+    </Style>
+    <Style TargetType="TabControl">
+        <Setter Property="Background" Value="#393E46"/>
+    </Style>
+    <Style TargetType="Border">
+        <Setter Property="Background" Value="#222831"/>
+    </Style>
+
+    <Style TargetType="{x:Type TabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid>
+                        <Border 
+                                Name="Border"
+                                Background="{DynamicResource WindowsColor}"
+                                BorderThickness="1,1,1,1" >
+                            <ContentPresenter x:Name="ContentSite"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    ContentSource="Header"
+                                    Margin="12,2,12,2"
+                                    RecognizesAccessKey="True"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Panel.ZIndex" Value="100" />
+                            <Setter TargetName="Border" Property="Background" Value="{DynamicResource SelectedBoxColor}" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Border" Property="Background" Value="{DynamicResource WindowsColor}" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
 </ResourceDictionary>
